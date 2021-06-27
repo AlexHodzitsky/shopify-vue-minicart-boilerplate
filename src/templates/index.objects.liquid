@@ -1,0 +1,36 @@
+{%- layout none -%}
+{%- capture content -%}
+	{{ content_for_index }}
+{%- endcapture -%}
+
+{%- assign settings_json = "" -%}
+{%- assign separator = "," -%}
+
+{%- for key in settings -%}
+	{%- if settings_json != "" -%}
+		{%- assign settings_json = settings_json | append: separator -%}
+	{%- endif -%}
+
+	{%- capture item -%}
+		"{{- key -}}": {{ settings[key] | json }}
+	{%- endcapture -%}
+
+	{%- assign settings_json = settings_json | append: item -%}
+{%- endfor -%}
+
+{
+	"shop": {
+		"currency": {{ shop.currency | json }},
+		"money_format": {{ shop.money_format | json }},
+		"money_with_currency_format": {{ shop.money_with_currency_format | json }}
+	},
+	"currency": {
+		"cart": {{ cart.currency | json }}
+	},
+	"settings": {
+		{{- settings_json -}}
+	},
+	"translations": {
+
+	}
+}

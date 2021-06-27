@@ -1,0 +1,41 @@
+.custom-simple-bar {
+	.simplebar-scrollbar {
+		&::before {
+			left: 0;
+			right: 0;
+			width: 100%;
+			border-radius: 2px;
+			background-color: #fff;
+		}
+
+		&.simplebar-visible {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	.simplebar-track {
+		&.simplebar-vertical {
+			width: 6px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 2px;
+				height: 100%;
+				background-color: #cbcbcb;
+				transform: translateX(-50%);
+			}
+
+			.simplebar-scrollbar {
+				&::before {
+					top: 0;
+					bottom: 0;
+				}
+			}
+		}
+	}
+}

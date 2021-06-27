@@ -1,0 +1,6 @@
+src/styles/libs/**/*.sass
+src/styles/vendor/**/*.sass
+src/styles/libs/**/*.scss
+src/styles/vendor/**/*.scss
+src/styles/libs/**/*.css
+src/styles/vendor/**/*.css

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>icons/arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="10_journal" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="journal-interior_desktop" transform="translate(-609.000000, -887.000000)">
+            <g id="blog-pagination" transform="translate(10.000000, 829.000000)">
+                <g id="Group-2" transform="translate(588.000000, 40.000000)">
+                    <g id="cta_button-copy">
+                        <g id="icons/black/arrow" transform="translate(20.000000, 24.000000) scale(-1, 1) translate(-20.000000, -24.000000) translate(10.000000, 14.000000)">
+                            <g id="Arrow">
+                                <rect id="container" x="0" y="0" width="20" height="20"></rect>
+                                <g transform="translate(1.000000, 4.000000)" fill="#121212" fill-rule="nonzero" id="Path">
+                                    <polygon points="15.5398488 6.484375 0.75 6.484375 0.75 5.484375 15.5398488 5.484375 11.0960585 1.04058473 11.8031653 0.333477946 17.4540623 5.984375 11.8031653 11.6352721 11.0960585 10.9281653"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="10px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/black/arrow" transform="translate(-1.000000, -4.000000)" fill="#121213" fill-rule="nonzero">
+            <g id="Arrow">
+                <g transform="translate(1.000000, 4.000000)" id="Path">
+                    <polygon points="15.5398488 6.484375 0.75 6.484375 0.75 5.484375 15.5398488 5.484375 11.0960585 1.04058473 11.8031653 0.333477946 17.4540623 5.984375 11.8031653 11.6352721 11.0960585 10.9281653"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

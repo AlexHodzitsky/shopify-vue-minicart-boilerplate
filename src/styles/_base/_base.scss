@@ -1,0 +1,88 @@
+@import "variables";
+@import "utd-reset";
+@import "fonts";
+@import "typography";
+
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background-color: #fff;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding-top: 83px;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+svg.icon {
+	width: 20px;
+}
+
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+
+.hidden {
+	display: none !important;
+}
+
+picture {
+	img {
+		filter: blur(0);
+		transition-property: filter;
+		transition-duration: 0.3s;
+	}
+}
+
+.lazy {
+	img {
+		filter: blur(10px);
+	}
+}
+
+.section-header {
+	max-width: 750px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 98px;
+	padding-bottom: 63px;
+	text-align: center;
+
+	&.section-header--full-width {
+		max-width: unset;
+	}
+}
+
+.container {
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 70px;
+	padding-right: 70px;
+}
+
+@include breakpoint(small) {
+	.section-header {
+		padding-top: 47px;
+		padding-bottom: 31px;
+	}
+
+	.container {
+		padding-left: 18px;
+		padding-right: 18px;
+	}
+}

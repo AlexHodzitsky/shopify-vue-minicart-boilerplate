@@ -1,0 +1,58 @@
+{% assign instagram = settings.social_instagram_link %}
+{% assign facebook  = settings.social_facebook_link %}
+{% assign twitter   = settings.social_twitter_link %}
+{% assign pinterest = settings.social_pinterest_link %}
+{% assign youtube   = settings.social_youtube_link %}
+{% assign vimeo     = settings.social_vimeo_link %}
+{% assign tumblr    = settings.social_tumblr_link %}
+{% assign snapchat  = settings.social_snapchat_link %}
+
+<ul class="social-links">
+	{% if instagram != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ instagram }}" target="_blank">INST.</a>
+		</li>
+	{% endif %}
+
+	{% if facebook != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ facebook }}" target="_blank">FB.</a>
+		</li>
+	{% endif %}
+
+	{% if twitter != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ twitter }}" target="_blank">TW.</a>
+		</li>
+	{% endif %}
+
+	{% if pinterest != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ pinterest }}" target="_blank">PT.</a>
+		</li>
+	{% endif %}
+
+	{% if youtube != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ youtube }}" target="_blank">YT.</a>
+		</li>
+	{% endif %}
+
+	{% if vimeo != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ vimeo }}" target="_blank">VM.</a>
+		</li>
+	{% endif %}
+
+	{% if tumblr != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ tumblr}}" target="_blank">TMB.</a>
+		</li>
+	{% endif %}
+
+	{% if snapchat != blank %}
+		<li class="social-links__item">
+			<a class="social-links__link" href="{{ snapchat }}" target="_blank">SNP.</a>
+		</li>
+	{% endif %}
+</ul>

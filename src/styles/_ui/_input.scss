@@ -1,0 +1,33 @@
+.input {
+	display: block;
+	appearance: none;
+	padding: 9px 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	font-family: $mabryPro;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1;
+	color: $black;
+	border-bottom: 2px solid #cbcbcb;
+	border-radius: 0;
+	transition-property: border-color;
+	transition-duration: 0.3s;
+
+	&::placeholder {
+		color: $suvaGrey;
+	}
+
+	&:focus {
+		border-color: $black;
+	}
+
+	&[disabled] {
+		color: $suvaGrey;
+	}
+
+	&.input--full-width {
+		width: 100%;
+	}
+}

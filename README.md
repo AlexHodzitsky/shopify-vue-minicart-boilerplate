@@ -1,2 +1,10 @@
-# shopify-vue-minicart-boilerplate
-Shopify vue 2.0 minicart boilerplate
+# Shopify vue ajax cart boilerplate
+
+Vue2 + Vuex
+
+src/scripts/vue - Main logic
+
+## TODO
+
+- [ ] Add documentation
+- [ ] Clean up theme and add store example

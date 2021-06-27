@@ -1,0 +1,64 @@
+.button {
+	display: inline-block;
+	width: 100%;
+	padding: 26.5px 20px;
+	border: 1px solid $white;
+	background-color: $white;
+	font-family: $mabryPro, sans-serif;
+	font-size: 12px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: $black;
+	cursor: pointer;
+	max-width: 310px;
+	border-radius: 0;
+	box-shadow: none;
+	transition-property: background-color, color;
+	transition-duration: 0.3s;
+	-webkit-appearance: none;
+
+	&.button--primary {
+		background-color: $white;
+		color: $black;
+
+		@include hover() {
+			background-color: $black;
+			color: $white;
+		}
+	}
+
+	&.button--secondary {
+		background-color: $black;
+		color: $white;
+
+		@include hover() {
+			background-color: $white;
+			color: $black;
+		}
+	}
+
+	&.button--full-width {
+		max-width: unset;
+	}
+
+	&.disabled,
+	&[disabled] {
+		background-color: $suvaGrey;
+		color: $white;
+		cursor: default;
+
+		@include hover() {
+			background-color: $suvaGrey;
+			color: $white;
+			cursor: default;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		min-width: 222px;
+		padding-top: 17.5px;
+		padding-bottom: 17.5px;
+	}
+}

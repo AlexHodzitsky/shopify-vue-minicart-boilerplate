@@ -1,0 +1,6 @@
+src/scripts/libs/**/*.js
+src/scripts/vendor/**/*.js
+src/styles/libs/**/*.sass
+src/styles/vendor/**/*.sass
+src/styles/libs/**/*.scss
+src/styles/vendor/**/*.scss

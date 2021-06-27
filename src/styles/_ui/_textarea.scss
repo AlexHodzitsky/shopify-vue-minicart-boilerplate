@@ -1,0 +1,34 @@
+.textarea {
+	display: block;
+	height: 121px;
+	padding: 10px;
+	border: 2px solid #cbcbcb;
+	outline: none;
+	background-color: transparent;
+	font-family: $mabryPro;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1;
+	color: #000;
+	appearance: none;
+	resize: none;
+	border-radius: 0;
+	transition-property: border-color;
+	transition-duration: 0.3s;
+
+	&::placeholder {
+		color: #909090;
+	}
+
+	&:focus {
+		border-color: #000;
+	}
+
+	&[disabled] {
+		color: #909090;
+	}
+
+	&.textarea--full-width {
+		width: 100%;
+	}
+}

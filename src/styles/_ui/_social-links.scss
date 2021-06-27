@@ -1,0 +1,32 @@
+.social-links {
+	display: flex;
+
+	.social-links__item {
+		margin-right: 43px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.social-links__link {
+		font-family: $mabryPro;
+		font-size: 12px;
+		font-weight: 700;
+		text-decoration: none;
+		color: $suvaGrey;
+		transition-property: color;
+		transition-duration: 0.3s;
+
+		&:hover {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+
+	@include breakpoint(extra-small) {
+		.social-links__item {
+			margin-right: 21px;
+		}
+	}
+}

@@ -1,0 +1,60 @@
+<section class="collections-list">
+	<div class="collections-list__wrapper container">
+		<header class="collections-list__title-wrapper section-header">
+			<h1 class="collections-list__title page-title">
+				{{- 'collections.general.list_collections_title_html' | t -}}
+			</h1>
+		</header>
+
+		<div class="collections-list__blocks">
+			<div class="collections-list__blocks-wrapper">
+				{% if section.settings.display_type == 'selected' %}
+					{%- assign collections_linklist = linklists[section.settings.links] -%}
+
+					{% for link in collections_linklist.links %}
+						{% if link.type != 'collection_link' %}
+							{% continue %}
+						{% endif %}
+
+						{%- assign collection = link.object -%}
+
+						{% render 'collection-item', collection: collection %}
+					{% endfor %}
+				{% else %}
+					{% for collection in collections %}
+						{% render 'collection-item', collection: collection %}
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": "Collections list page",
+	"settings": [
+		{
+			"type": "link_list",
+			"id": "links",
+			"label": "Linklist of collections"
+		},
+		{
+			"type": "radio",
+			"id": "display_type",
+			"label": "Select collections to show",
+			"default": "selected",
+			"options": [
+				{
+					"value": "all",
+					"label": "All"
+				},
+				{
+					"value": "selected",
+					"label": "From linklist"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

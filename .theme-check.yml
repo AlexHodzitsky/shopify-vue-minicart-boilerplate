@@ -1,0 +1,30 @@
+root: dist
+
+ignore:
+  - node_modules/*
+
+ConvertIncludeToRender:
+  enabled: false
+
+LiquidTag:
+  enabled: false
+
+TemplateLength:
+  enabled: false
+
+MissingTemplate:
+  ignore:
+    - snippets/icon-*
+
+UnusedSnippet:
+  ignore:
+    - snippets/icon-*
+
+ImgWidthAndHeight:
+  enabled: false
+
+ImgLazyLoading:
+  enabled: false
+
+ParserBlockingJavaScript:
+  enabled: false

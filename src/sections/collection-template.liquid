@@ -1,0 +1,164 @@
+{% case section.settings.grid %}
+	{% when 2 %}
+		{%- assign max_height = 530 -%}
+	{% when 3 %}
+		{%- assign max_height = 345 -%}
+	{% when 4 %}
+		{%- assign max_height = 250 -%}
+	{% when 5 %}
+		{%- assign max_height = 195 -%}
+{% endcase %}
+
+{% if section.settings.layout == 'grid' %}
+	{%- assign limit = section.settings.grid | times: section.settings.rows -%}
+{% else %}
+	{%- assign limit = 16 -%}
+{% endif %}
+
+
+
+{% schema %}
+{
+	"name": {
+		"de": "Kategorie-Seiten",
+		"en": "Collection pages",
+		"es": "Páginas de colección",
+		"fr": "Pages de collections",
+		"it": "Pagine delle collezioni",
+		"ja": "コレクションページ",
+		"pt-BR": "Páginas de coleções"
+	},
+	"settings": [
+		{
+			"type": "select",
+			"id": "layout",
+			"label": {
+				"de": "Layout",
+				"en": "Layout",
+				"es": "Diseño",
+				"fr": "Mise en page",
+				"it": "Layout",
+				"ja": "レイアウト",
+				"pt-BR": "Layout"
+			},
+			"default": "grid",
+			"options": [
+				{
+					"value": "grid",
+					"label": {
+						"de": "Raster",
+						"en": "Grid",
+						"es": "Cuadrícula",
+						"fr": "Grille",
+						"it": "Griglia",
+						"ja": "グリッド",
+						"pt-BR": "Grade"
+					}
+				},
+				{
+					"value": "list",
+					"label": {
+						"de": "Liste",
+						"en": "List",
+						"es": "Lista",
+						"fr": "Liste",
+						"it": "Elenco",
+						"ja": "リスト",
+						"pt-BR": "Lista"
+					}
+				}
+			]
+		},
+		{
+			"type": "range",
+			"id": "grid",
+			"label": {
+				"de": "Produkte per Reihe (nur Raster)",
+				"en": "Products per row (grid only)",
+				"es": "Productos por fila (solo cuadrícula)",
+				"fr": "Produits par rangée (grille uniquement)",
+				"it": "Prodotti per riga (solo griglia)",
+				"ja": "行あたりの商品数（グリッドのみ）",
+				"pt-BR": "Produtos por linha (somente grade)"
+			},
+			"default": 4,
+			"min": 2,
+			"max": 5,
+			"step": 1
+		},
+		{
+			"type": "range",
+			"id": "rows",
+			"label": {
+				"de": "Reihen per Seite (nur Raster)",
+				"en": "Rows per page (grid only)",
+				"es": "Filas por página (solo cuadrícula)",
+				"fr": "Rangées par page (grille uniquement)",
+				"it": "Righe per pagina (solo griglia)",
+				"ja": "ページあたりの行数（グリッドのみ）",
+				"pt-BR": "Linhas por página (somente grade)"
+			},
+			"default": 2,
+			"min": 2,
+			"max": 8,
+			"step": 1
+		},
+		{
+			"type": "checkbox",
+			"id": "show_collection_image",
+			"label": {
+				"de": "Kategorie-Foto anzeigen",
+				"en": "Show collection image",
+				"es": "Mostrar imagen de la colección",
+				"fr": "Afficher l'image de la collection",
+				"it": "Mostra immagine collezione",
+				"ja": "コレクションの画像を表示する",
+				"pt-BR": "Exibir imagem da coleção"
+			},
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_vendor",
+			"label": {
+				"de": "Produkt-Lieferanten anzeigen",
+				"en": "Show product vendors",
+				"es": "Mostrar proveedores del producto",
+				"fr": "Afficher les vendeurs",
+				"it": "Mostra fornitori prodotto",
+				"ja": "商品の販売元を表示する",
+				"pt-BR": "Exibir fornecedores do produto"
+			},
+			"default": false
+		},
+		{
+			"type": "checkbox",
+			"id": "sort_enable",
+			"label": {
+				"de": "Sortieren erlauben",
+				"en": "Enable sorting",
+				"es": "Habilitar la función ordenar",
+				"fr": "Activer le tri",
+				"it": "Permetti di ordinare",
+				"ja": "並べ替えを有効にする",
+				"pt-BR": "Ativar classificação"
+			},
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "tags_enable",
+			"label": {
+				"de": "Tag-Filtern erlauben",
+				"en": "Enable tag filtering",
+				"es": "Habilitar filtro de etiquetas",
+				"fr": "Activer le filtrage par balises",
+				"it": "Attiva filtro tag",
+				"ja": "タグでの絞り込みを有効にする",
+				"pt-BR": "Ativar filtragem de tags"
+			},
+			"default": true
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,112 @@
+[
+	{
+		"name": "Social media",
+		"settings": [
+			{
+				"type": "header",
+				"content": "Social sharing image"
+			},
+			{
+				"type": "image_picker",
+				"id": "share_image",
+				"label": "Image",
+				"info": "Shown when sharing a link on social media. [Learn more](https://help.shopify.com/manual/using-themes/troubleshooting/showing-social-media-thumbnail-images/) about image thumbnails."
+			},
+			{
+				"type": "header",
+				"content": "Social sharing options"
+			},
+			{
+				"type": "checkbox",
+				"id": "share_facebook",
+				"label": "Share on Facebook",
+				"default": true
+			},
+			{
+				"type": "checkbox",
+				"id": "share_twitter",
+				"label": "Tweet on Twitter",
+				"default": true
+			},
+			{
+				"type": "checkbox",
+				"id": "share_pinterest",
+				"label": "Pin on Pinterest",
+				"default": true
+			},
+			{
+				"type": "header",
+				"content": "Social accounts"
+			},
+			{
+				"type": "text",
+				"id": "social_twitter_link",
+				"label": "Twitter",
+				"info": "https://twitter.com/shopify"
+			},
+			{
+				"type": "text",
+				"id": "social_facebook_link",
+				"label": "Facebook",
+				"info": "https://facebook.com/shopify"
+			},
+			{
+				"type": "text",
+				"id": "social_pinterest_link",
+				"label": "Pinterest",
+				"info": "https://pinterest.com/shopify"
+			},
+			{
+				"type": "text",
+				"id": "social_instagram_link",
+				"label": "Instagram",
+				"info": "http://instagram.com/shopify"
+			},
+			{
+				"type": "text",
+				"id": "social_tumblr_link",
+				"label": "Tumblr",
+				"info": "http://shopify.tumblr.com"
+			},
+			{
+				"type": "text",
+				"id": "social_snapchat_link",
+				"label": "Snapchat",
+				"info": "https://www.snapchat.com/add/shopify"
+			},
+			{
+				"type": "text",
+				"id": "social_youtube_link",
+				"label": "YouTube",
+				"info": "https://www.youtube.com/shopify"
+			},
+			{
+				"type": "text",
+				"id": "social_vimeo_link",
+				"label": "Vimeo",
+				"info": "https://vimeo.com/shopify"
+			}
+		]
+	},
+	{
+		"name": "Favicon",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "favicon",
+				"label": "Favicon image",
+				"info": "Will be scaled down to 32 x 32px"
+			}
+		]
+	},
+	{
+		"name": "Placeholder",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "placeholder_image",
+				"label": "Placeholder image"
+			}
+		]
+	}
+]

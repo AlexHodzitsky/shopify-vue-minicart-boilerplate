@@ -1,0 +1,76 @@
+body {
+	font-family: $helvetica;
+	font-size: 18px;
+	color: #000;
+}
+
+.h1 {
+	font-family: $bodoni;
+	font-size: 90px;
+	font-weight: normal;
+	line-height: 0.86;
+
+	@include breakpoint(extra-small) {
+		font-size: 46px;
+	}
+}
+
+.h2 {
+	font-family: $bodoni;
+	font-size: 58px;
+	font-weight: normal;
+	line-height: 0.96;
+
+	@include breakpoint(extra-small) {
+		font-size: 34px;
+		line-height: 0.86;
+	}
+}
+
+.cents {
+	color: #909090;
+}
+
+.grey-part {
+	color: #909090;
+}
+
+.page-title {
+	font-family: $bodoni;
+	font-size: 90px;
+	font-weight: 400;
+	line-height: 0.86;
+}
+
+.section-title {
+	font-family: $bodoni;
+	font-size: 58px;
+	font-weight: 400;
+	line-height: 0.86;
+
+	&.section-title--with-parts {
+		font-size: 0;
+
+		span {
+			font-size: 58px;
+		}
+	}
+}
+
+@include breakpoint(small) {
+	.page-title {
+		font-size: 40px;
+		line-height: 0.9;
+		letter-spacing: -0.03em;
+	}
+
+	.section-title {
+		font-size: 34px;
+
+		&.section-title--with-parts {
+			span {
+				font-size: 34px;
+			}
+		}
+	}
+}

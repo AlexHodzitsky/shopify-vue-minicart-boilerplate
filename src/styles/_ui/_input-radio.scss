@@ -1,0 +1,17 @@
+.input-radio {
+
+    label {
+        
+    }
+
+    input[type=radio] {
+       
+    }
+
+    input[type=radio]:checked {
+
+        + label {
+            
+        }
+    }
+}

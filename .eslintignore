@@ -1,0 +1,3 @@
+src/scripts/libs/**/*.js
+src/scripts/vendor/**/*.js
+

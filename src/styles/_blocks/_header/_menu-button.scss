@@ -1,0 +1,80 @@
+.menu-button {
+	position: relative;
+	padding-left: 0;
+	padding-right: 20px;
+	border: none;
+	background-color: transparent;
+	font-family: $mabryPro;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: $gray;
+
+	.menu-button__icon {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		transform: translateY(-50%);
+		transition-property: transform;
+		transition-duration: 0.4s;
+
+		> span {
+			position: absolute;
+			display: inline-block;
+			width: 5px;
+			height: 5px;
+			background-color: #000;
+			transition-property: all;
+			transition-duration: 0.4s;
+
+			&:nth-child(1) {
+				top: 0;
+				left: 0;
+			}
+
+			&:nth-child(2) {
+				top: 0;
+				right: 0;
+			}
+
+			&:nth-child(3) {
+				bottom: 0;
+				right: 0;
+			}
+
+			&:nth-child(4) {
+				bottom: 0;
+				left: 0;
+			}
+		}
+	}
+
+	&:hover {
+		.menu-button__icon {
+			transform: translateY(-50%) rotate(45deg);
+		}
+		//.menu-button__icon {
+		//	> span {
+		//		&:nth-child(1) {
+		//			transform: translateX(1px) translateY(1px);
+		//		}
+		//
+		//		&:nth-child(2) {
+		//			transform: translateX(-1px) translateY(1px);
+		//		}
+		//
+		//		&:nth-child(3) {
+		//			transform: translateX(-1px) translateY(-1px);
+		//		}
+		//
+		//		&:nth-child(4) {
+		//			transform: translateX(1px) translateY(-1px);
+		//		}
+		//	}
+		//}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"plugins": [
+		{
+			"removeViewBox": false
+		},
+		{
+			"addClassesToSVGElement": {
+				"classNames": [
+					"icon"
+				]
+			}
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{% layout none %}
+{% assign json = "" %}
+{% for item in cart.items %}
+	{% if json != "" %}
+		{% assign json = json | append: "," %}
+	{% endif %}
+
+	{% capture item_json %}
+		"{{- item.id -}}": {
+			"id": {{ item.id }},
+			"compare_at_price": {{ item.variant.compare_at_price | json }}
+		}
+	{% endcapture %}
+
+	{% assign json = json | append: item_json %}
+{%- endfor -%}
+{
+	{{ json }}
+}

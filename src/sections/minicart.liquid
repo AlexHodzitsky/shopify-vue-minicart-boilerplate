@@ -1,0 +1,34 @@
+<div
+	id="minicart"
+	data-section-id="{{- section.id -}}"
+	data-section-type="minicart"
+></div>
+
+<script id="minicart-customizer-data" type="application/json">
+	{
+		"customizer": {
+			"continue_shopping_button_text": {{- section.settings.continue_shopping_button_text | json -}},
+			"continue_shopping_button_url": {{- section.settings.continue_shopping_button_url | json -}}
+		}
+	}
+</script>
+
+{%- schema -%}
+{
+	"name": "Minicart",
+	"settings": [
+		{
+			"type": "text",
+			"id": "continue_shopping_button_text",
+			"label": "Continue Shopping Button Text",
+			"default": "CONTINUE SHOPPING",
+			"info": "Shown when minimap is empty"
+		},
+		{
+			"type": "url",
+			"id": "continue_shopping_button_url",
+			"label": "Continue Shopping Button URL"
+		}
+	]
+}
+{%- endschema -%}

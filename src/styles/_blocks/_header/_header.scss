@@ -1,0 +1,66 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	display: flex;
+	width: 100%;
+	height: 83px;
+	padding: 0 70px;
+	background-color: #fff;
+	color: #fff;
+
+	.header__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		max-width: 1300px;
+		margin: 0 auto;
+		border-bottom: 1px solid #cbcbcb;
+	}
+
+	.header__bar {
+		display: flex;
+		align-items: center;
+	}
+
+	.header__bar-links {
+		display: flex;
+		align-items: center;
+		margin-right: 37px;
+		padding-right: 33px;
+		border-right: 1px solid $gray;
+	}
+
+	.header__item-link {
+		+ .header__item-link {
+			margin-left: 40px;
+		}
+	}
+
+	.header__link {
+		font-family: $mabryPro;
+		font-size: 12px;
+		font-weight: bold;
+		line-height: 1;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #000;
+		transition-property: color;
+		transition-duration: 0.3s;
+
+		&:hover {
+			color: $gray;
+		}
+	}
+
+	.header__cart-count {
+		color: $gray;
+	}
+
+	@include breakpoint(small) {
+		padding: 0 18px;
+	}
+}

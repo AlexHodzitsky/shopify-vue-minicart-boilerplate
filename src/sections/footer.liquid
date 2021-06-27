@@ -1,0 +1,123 @@
+{% assign footer_linklist        = section.settings.footer_linklist %}
+{% assign logo                   = section.settings.logo %}
+{% assign rights_text            = section.settings.rights_text %}
+
+{% assign newsletter_title       = section.settings.newsletter_title %}
+{% assign newsletter_description = section.settings.newsletter_description %}
+{% assign input_placeholder      = section.settings.input_placeholder %}
+{% assign button_text            = section.settings.button_text %}
+
+<footer class="footer" role="contentinfo">
+	<div class="footer__container">
+		<div class="footer__row">
+			{% if logo != blank %}
+				<div class="footer__image-wrapper">
+					<a href="/">
+						<img class="footer__image" src="{{ logo | img_url: '54x' }}"
+							 srcset="{{ logo | img_url: '54x' }} 1x, {{ logo | img_url: '108x' }} 2x"
+							 alt="{{ shop.name }}">
+					</a>
+				</div>
+			{% endif %}
+
+			<div class="footer__content">
+				{% if linklists[footer_linklist].links.size > 0 %}
+					<ul class="footer__navigation">
+						{% for link in linklists[footer_linklist].links %}
+							<li class="footer__item">
+								<a href="{{ link.url }}" class="footer__link">{{ link.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+
+				<div class="footer__newsletter">
+					{% if newsletter_title != blank %}
+						<h4 class="footer__title">{{ newsletter_title }}</h4>
+					{% endif %}
+
+					{% if newsletter_description != blank %}
+						<p class="footer__description">{{ newsletter_description }}</p>
+					{% endif %}
+
+					{% if button_text != blank %}
+						{% form 'contact' %}
+							<input type="email" class="input input--full-width footer__input" id="ContactFormEmail" name="contact[email]"
+								   placeholder="{% if input_placeholder != blank %}{{ input_placeholder }}{% endif %}" autocorrect="off" autocapitalize="off"
+								   value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
+
+							<input type="submit" class="button button--primary footer__button" value="{{ button_text }}">
+						{% endform %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+
+		<div class="footer__bottom-row">
+			<p class="footer__rights">
+				<span>&copy; {{ 'now' | date: "%Y" }}</span>
+
+				{% if rights_text != blank %}
+					{{ rights_text }}
+				{% endif %}
+			</p>
+
+			<nav class="footer__social-links">
+				{% include 'social-links' %}
+			</nav>
+		</div>
+	</div>
+</footer>
+
+{% schema %}
+{
+	"name": "Footer",
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "logo",
+			"label": "Logo"
+		},
+		{
+			"type": "link_list",
+			"id": "footer_linklist",
+			"label": "Menu",
+			"default": "footer"
+		},
+		{
+			"type": "text",
+			"id": "rights_text",
+			"label": "Copyright text",
+			"default": "Alex Hodzitsky"
+		},
+		{
+			"type": "header",
+			"content": "Newsletter"
+		},
+		{
+			"type": "text",
+			"id": "newsletter_title",
+			"label": "Title",
+			"default": "Newsletter"
+		},
+		{
+			"type": "text",
+			"id": "newsletter_description",
+			"label": "Description",
+			"default": "Subscribe to get updates about our new products"
+		},
+		{
+			"type": "text",
+			"id": "input_placeholder",
+			"label": "Input placeholder",
+			"default": "EMAIL"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button text",
+			"default": "SUBSCRIBE"
+		}
+	]
+}
+{% endschema %}

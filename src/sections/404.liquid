@@ -1,0 +1,68 @@
+{% assign title 		= section.settings.heading %}
+{% assign subtitle 		= section.settings.subtitle %}
+{% assign description 	= section.settings.description %}
+{% assign button_text 	= section.settings.button_text %}
+
+<div class="not-found">
+	<div class="not-found__wrapper">
+		{% if title != blank %}
+			<h1 class="not-found__title">
+				{{- title -}}
+			</h1>
+		{% endif %}
+
+		{% if subtitle != blank or description != blank or button_text != blank %}
+			<div class="not-found__additional-content">
+				{% if subtitle != blank %}
+					<p class="not-found__subtitle">
+						{{- subtitle -}}
+					</p>
+				{% endif %}
+
+				{% if description != blank %}
+					<p class="not-found__description">
+						{{- description -}}
+					</p>
+				{% endif %}
+
+				{% if button_text != blank %}
+					<a href="/" class="button not-found__back-home-button">
+						{{- button_text -}}
+					</a>
+				{% endif %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+{% schema %}
+{
+	"name": "404",
+	"settings": [
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Title",
+			"default": "404"
+		},
+		{
+			"type": "text",
+			"id": "subtitle",
+			"label": "Subtitle",
+			"default": "PAGE NOT FOUND"
+		},
+		{
+			"type": "text",
+			"id": "description",
+			"label": "Description",
+			"default": "That page doesn't exist or is unavailable"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text",
+			"default": "GO BACK HOME"
+		}
+	]
+}
+{% endschema %}

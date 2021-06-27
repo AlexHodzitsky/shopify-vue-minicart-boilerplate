@@ -1,0 +1,56 @@
+{% assign metafields_secondary_image = collection.metafields.general.secondary_image | first %}
+
+{% assign image = collection.image | default: settings.placeholder_image %}
+
+{% assign image_alt 	= collection.image.alt %}
+
+{% assign image_615x 	= image | img_url: '615x' %}
+{% assign image_1230x 	= image | img_url: '1230x' %}
+
+{% assign image_451x 	= image | img_url: '451x' %}
+{% assign image_902x 	= image | img_url: '902x' %}
+
+{% if metafields_secondary_image != blank %}
+	{% assign image_alt 	= metafields_secondary_image.alt %}
+
+	{% assign image_615x 	= metafields_secondary_image.cloudinary_src | append: 'w_615' %}
+	{% assign image_1230x 	= metafields_secondary_image.cloudinary_src | append: 'w_1230' %}
+
+	{% assign image_451x 	= metafields_secondary_image.cloudinary_src | append: 'w_451' %}
+	{% assign image_902x 	= metafields_secondary_image.cloudinary_src | append: 'w_902' %}
+{% endif %}
+
+{% assign image_alt = image_alt | default: collection.title %}
+
+<div class="collection-item">
+	<div class="collection-item__wrapper">
+		<div class="collection-item__image-wrapper">
+			<picture>
+				<source srcset="{{ image_615x }} 1x, {{ image_1230x }} 2x" media="(min-width: 992px)">
+				<source srcset="{{ image_451x }} 1x, {{ image_902x }} 2x" media="(max-width: 991px)">
+
+				<img class="collection-item__image" src="{{ image_615x }}" srcset="{{ image_615x }}" alt="{{ image_alt }}" />
+			</picture>
+
+			<div class="collection-item__image-overlay">
+				<a class="collection-item__image-overlay-link link" href="{{ collection.url }}">
+					{{- 'collections.general.load_more' | t -}}
+				</a>
+			</div>
+
+			<a class="collection-item__image-link" href="{{ collection.url }}"></a>
+		</div>
+
+		<div class="collection-item__content">
+			<h4 class="collection-item__title-wrapper">
+				<a class="collection-item__title" href="{{ collection.url }}">
+					{{- collection.title -}}
+				</a>
+			</h4>
+
+			<a class="collection-item__link link link--primary" href="{{ collection.url }}">
+				{{- 'collections.general.learn_more' | t -}}
+			</a>
+		</div>
+	</div>
+</div>

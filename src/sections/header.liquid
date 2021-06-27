@@ -1,0 +1,62 @@
+<div data-section-id="{{ section.id }}" data-section-type="header-section">
+	<header class="header" role="banner">
+		<div class="header__container">
+			{% if section.settings.logo != blank %}
+				<a href="{{ routes.root_url }}" class="header__logo">
+					<img class="header__logo-image"
+						 src="{{ section.settings.logo | img_url: '54x' }}"
+						 srcset="{{ section.settings.logo | img_url: '54x' }} 1x, {{ section.settings.logo | img_url: '108x' }} 2x"
+						 alt="{{ shop.name }}">
+				</a>
+			{% endif %}
+
+			<div class="header__bar">
+				<ul class="header__bar-links">
+					{% if shop.customer_accounts_enabled %}
+						{% if customer %}
+							<li class="header__item-link">
+								<a href="{{ routes.account_url }}" class="header__link">Account</a>
+							</li>
+						{% else %}
+							<li class="header__item-link">
+								<a href="{{ routes.account_login_url }}" class="header__link">Account</a>
+							</li>
+						{% endif %}
+					{% endif %}
+
+					<li class="header__item-link">
+						<a href="{{ routes.cart_url }}" class="header__link js-open-minicart">Cart <span class="header__cart-count">({{ cart.item_count }})</span></a>
+					</li>
+				</ul>
+
+				<button class="menu-button">Menu
+					<span class="menu-button__icon">
+						<span></span><span></span><span></span><span></span>
+					</span>
+				</button>
+
+				<nav role="navigation"></nav>
+			</div>
+		</div>
+	</header>
+</div>
+
+
+{% schema %}
+{
+	"name": "Header",
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "logo",
+			"label": "Logo image"
+		},
+		{
+			"type": "link_list",
+			"id": "main_linklist",
+			"label": "Menu",
+			"default": "main-menu"
+		}
+	]
+}
+{% endschema %}

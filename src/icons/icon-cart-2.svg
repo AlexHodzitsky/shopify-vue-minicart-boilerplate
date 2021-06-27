@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+	<title>Cart icon</title>
+	<desc>Created with Sketch.</desc>
+	<g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g id="cart/empty-cart" transform="translate(-30.000000, -21.000000)">
+			<g id="Cart-icon">
+				<g transform="translate(30.000000, 20.000000)">
+					<rect id="cart-container" x="0" y="0" width="24" height="24"></rect>
+					<g id="RC_cart-icon" transform="translate(0.000000, 1.000000)" fill="#FFFFFF" fill-rule="nonzero">
+						<circle id="Oval" cx="18.4122137" cy="20.0427481" r="2.12519084"></circle>
+						<polygon id="Path" points="24 3.24274809 5.36793893 3.24274809 4.70839695 0 0 0 0 1.70381679 3.31603053 1.70381679 5.78931298 13.7770992 4.83664122 17.3679389 21.4717557 17.3679389 21.4717557 15.6641221 7.05343511 15.6641221 7.5480916 13.8320611 7.52977099 13.7587786 22.3694656 12.5496183"></polygon>
+						<circle id="Oval" cx="7.78625954" cy="20.0427481" r="2.12519084"></circle>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</svg>
